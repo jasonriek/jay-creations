@@ -27,6 +27,10 @@ body {
     width: 100%;
 }
 
+input {
+  width: 100%;
+}
+
 nav.navigation
 {
     position: fixed;
@@ -43,6 +47,7 @@ nav.navigation
     padding-right: 64px;
     border-bottom: 1px solid #555555;
     top: 0;
+    z-index: 2;
 }
 
 .header-title {
@@ -53,7 +58,6 @@ nav.navigation
 .container {
     padding-top: 32px;
     width: 100%;
-    height: 100%;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
