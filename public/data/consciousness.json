@@ -4,8 +4,8 @@
       "note_nodes": {
          "Not AI": {
             "description": "Consciousness cannot be created \nthrough computational Artificial \nIntelligence.",
-            "x": 2456.5,
-            "y": 767,
+            "x": 2121.5,
+            "y": 765,
             "w": 209,
             "h": 54,
             "output_connections": [],
@@ -32,8 +32,8 @@
          },
          "Analytical Idealism": {
             "description": "Analytical Idealism",
-            "x": 1426.5,
-            "y": 627.5,
+            "x": 1091.5,
+            "y": 625.5,
             "w": 131,
             "h": 29,
             "output_connections": [
@@ -79,8 +79,8 @@
          },
          "note_nodes_2": {
             "description": "Consciousness is Fundamental",
-            "x": 1549.25,
-            "y": 863.25,
+            "x": 1214.25,
+            "y": 861.25,
             "w": 188.75,
             "h": 25.75,
             "output_connections": [
@@ -108,8 +108,8 @@
          },
          "Consciousness": {
             "description": "Consciousness",
-            "x": 930.75,
-            "y": 671.625,
+            "x": 595.75,
+            "y": 669.625,
             "w": 96.25,
             "h": 32.375,
             "output_connections": [
@@ -124,8 +124,8 @@
          },
          "note_nodes_3": {
             "description": "Materialism is an instrument to\nmeasure reality, but is not \nreality in itself. ",
-            "x": 1923,
-            "y": 905.5,
+            "x": 1588,
+            "y": 903.5,
             "w": 208,
             "h": 55,
             "output_connections": [
@@ -153,8 +153,8 @@
          },
          "Bernardo Kastrup": {
             "description": "Bernardo Kastrup",
-            "x": 2029,
-            "y": 516.5,
+            "x": 1694,
+            "y": 514.5,
             "w": 112,
             "h": 33,
             "output_connections": [
@@ -194,8 +194,8 @@
          },
          "note_nodes_4": {
             "description": "The World as Will and Representation (Book)",
-            "x": 1500,
-            "y": 489.5,
+            "x": 1165,
+            "y": 487.5,
             "w": 274,
             "h": 27,
             "output_connections": [
@@ -235,8 +235,8 @@
          },
          "Being and Time": {
             "description": "Being and Time (Book)",
-            "x": 598.25,
-            "y": 396.5,
+            "x": 263.25,
+            "y": 394.5,
             "w": 145.5,
             "h": 31,
             "output_connections": [
@@ -258,8 +258,8 @@
          },
          "Federico Faggin": {
             "description": "Federico Faggin (Micro Processor Inventor)",
-            "x": 1943,
-            "y": 635.75,
+            "x": 1608,
+            "y": 633.75,
             "w": 270,
             "h": 28.5,
             "output_connections": [
@@ -287,8 +287,8 @@
          },
          "note_nodes_1": {
             "description": "Division of Object and Subject",
-            "x": 1758,
-            "y": 327.75,
+            "x": 1423,
+            "y": 325.75,
             "w": 200,
             "h": 30.5,
             "output_connections": [],
@@ -309,8 +309,8 @@
          },
          "note_nodes_5": {
             "description": "Principle of Sufficient Reason",
-            "x": 1131.5,
-            "y": 224,
+            "x": 796.5,
+            "y": 222,
             "w": 203,
             "h": 30,
             "output_connections": [
@@ -332,8 +332,8 @@
          },
          "note_nodes_6": {
             "description": "Gottfried Wilhelm Leibniz",
-            "x": 1016.5,
-            "y": 120,
+            "x": 681.5,
+            "y": 118,
             "w": 163,
             "h": 32,
             "output_connections": [
@@ -348,8 +348,8 @@
          },
          "note_nodes_7": {
             "description": "All our representations are \nobjects for the subject, and \nall objects of the subject \nare our representations.",
-            "x": 1544,
-            "y": 206.5,
+            "x": 1209,
+            "y": 204.5,
             "w": 184,
             "h": 73,
             "output_connections": [
@@ -371,8 +371,8 @@
          },
          "Immanuel Kant": {
             "description": "Immanuel Kant",
-            "x": 1004,
-            "y": -5.5,
+            "x": 669,
+            "y": -7.5,
             "w": 96,
             "h": 33,
             "output_connections": [
@@ -387,8 +387,8 @@
          },
          "a priori": {
             "description": "a priori",
-            "x": 1591.5,
-            "y": 109.5,
+            "x": 1256.5,
+            "y": 107.5,
             "w": 63,
             "h": 29,
             "output_connections": [],
@@ -403,8 +403,8 @@
          },
          "note_nodes_9": {
             "description": "Third Aspect of the Principle \nof Sufficient Reason",
-            "x": 924.75,
-            "y": 532.75,
+            "x": 589.75,
+            "y": 530.75,
             "w": 188.5,
             "h": 38.5,
             "output_connections": [],
@@ -425,8 +425,8 @@
          },
          "Schopenhauer": {
             "description": "Arthur Schopenhauer",
-            "x": 1341.25,
-            "y": 319,
+            "x": 1006.25,
+            "y": 317,
             "w": 129.5,
             "h": 26,
             "output_connections": [
@@ -478,9 +478,9 @@
          },
          "Heidegger": {
             "description": "Martin Heidegger",
-            "x": 395.5,
-            "y": 274,
-            "w": 113,
+            "x": 60.5,
+            "y": 272,
+            "w": 121.5,
             "h": 28,
             "output_connections": [
                {
@@ -507,8 +507,8 @@
          },
          "note_nodes_10": {
             "description": "Fourfold Root of \nthe Principle of \nSufficient Reason",
-            "x": 1067.25,
-            "y": 409.75,
+            "x": 732.25,
+            "y": 407.75,
             "w": 123.5,
             "h": 52.5,
             "output_connections": [
@@ -542,8 +542,8 @@
          },
          "note_nodes_11": {
             "description": " Critique of Pure Reason (Book)",
-            "x": 1314,
-            "y": 54,
+            "x": 979,
+            "y": 52,
             "w": 210,
             "h": 34,
             "output_connections": [
@@ -571,8 +571,8 @@
          },
          "Will": {
             "description": "Will",
-            "x": 2031,
-            "y": 396,
+            "x": 1696,
+            "y": 394,
             "w": 39,
             "h": 27,
             "output_connections": [
@@ -594,8 +594,8 @@
          },
          "note_nodes_8": {
             "description": "Matter has no essence \nindependent of mental\nperception",
-            "x": 2426.5,
-            "y": 579.5,
+            "x": 2091.5,
+            "y": 577.5,
             "w": 171,
             "h": 55,
             "output_connections": [
@@ -623,8 +623,8 @@
          },
          "deconstruction": {
             "description": "Deconstruction",
-            "x": 262,
-            "y": 410,
+            "x": -73,
+            "y": 408,
             "w": 108,
             "h": 26,
             "output_connections": [],
@@ -639,8 +639,8 @@
          },
          "phenomenology": {
             "description": "Phenomenology",
-            "x": 270.5,
-            "y": 129,
+            "x": -64.5,
+            "y": 127,
             "w": 99,
             "h": 30,
             "output_connections": [
@@ -657,8 +657,8 @@
       "map_nodes": {
          "Example (1)": {
             "description": "If I were to view a person in\na live stream on a computer screen, \nI would be mistaken to think that \nthe pixels moving on the screen\nrepresenting the person, was actually\nthe person.",
-            "x": 2095,
-            "y": 1007,
+            "x": 1760,
+            "y": 1005,
             "w": 128,
             "h": 64,
             "output_connections": [],
@@ -673,8 +673,8 @@
          },
          "Payne's Summary": {
             "description": "In his Translator's Introduction to Schopenhauer's The World as Will and Representation, E. F. J. Payne concisely summarized the Fourfold Root.\n\nOur knowing consciousness...is divisible solely into \nsubject and object. To be object for the subject and \nto be our representation or mental picture are one \nand the same. All our representations are objects \nfor the subject, and all objects of the subject are \nour representations. These stand to one \nanother in a regulated connection which in form \nis determinable a priori, and by virtue of this \nconnection nothing existing by itself and independent, \nnothing single and detached, can become an object for us.\n\nThe first aspect  of this principle is that of becoming, \nwhere it appears as the law of causality and is applicable \nonly to changes. Thus if the cause is given, the effect \nmust of necessity follow. \n\nThe second aspect deals with concepts or abstract \nrepresentations, which are themselves drawn from \nrepresentations of intuitive perception, and here \nthe principle of sufficient reason states that, \nif certain premises are given, the conclusion \nmust follow. \n\nThe third aspect of the principle is concerned with \nbeing in space and time, and shows that the existence \nof one relation inevitably implies the other, thus that \nthe equality of the angles of a triangle necessarily \nimplies the equality of its sides and vice versa. \n\nFinally, the fourth aspect deals with actions, and \nthe principle appears as the law of motivation, which \nstates that a definite course of action inevitably \nensues on a given character and motive.",
-            "x": 1270,
-            "y": 447,
+            "x": 935,
+            "y": 445,
             "w": 128,
             "h": 64,
             "output_connections": [],
@@ -689,8 +689,8 @@
          },
          "Explanation (1)": {
             "description": "It happens\nbefore materialization,\neverything comes out of\nconsciousness, it's the\nprimary substance.",
-            "x": 1655,
-            "y": 969,
+            "x": 1320,
+            "y": 967,
             "w": 128,
             "h": 64,
             "output_connections": [],
@@ -705,8 +705,8 @@
          },
          "Explanation (2)": {
             "description": "",
-            "x": 2167,
-            "y": 454,
+            "x": 1832,
+            "y": 452,
             "w": 128,
             "h": 64,
             "output_connections": [],
@@ -721,8 +721,8 @@
          },
          "Vedanta": {
             "description": "",
-            "x": 2728,
-            "y": 107,
+            "x": 2393,
+            "y": 105,
             "w": 128,
             "h": 64,
             "output_connections": [
