@@ -1,0 +1,25 @@
+{
+  "name": "freelance_website",
+  "version": "1.0.0",
+  "description": "The website that will host my freelance profile.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonriek/freelance_website.git"
+  },
+  "author": "Jason Riek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonriek/freelance_website/issues"
+  },
+  "homepage": "https://github.com/jasonriek/freelance_website#readme",
+  "dependencies": {
+    "better-sqlite3": "^7.6.2",
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,366 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #111111;
+    overflow: hidden;
+}
+
+header {
+    color: #EEEEEE;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 64px;
+    background-color: #000000;
+    border-bottom: 1px solid #555555;
+    z-index: 3;
+}
+
+.node-drag-panel {
+  margin: auto;
+  color: #EEEEEE;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 64px;
+  padding-top: 75px;
+  background-color: #000000;
+  border-right: 1px solid #555555;
+  border-left: 1px solid #555555;
+  z-index: 2;
+}
+  
+  .SidePanel {
+    color: #EEEEEE;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 68px;
+    background-color: #000000;
+    overflow-x: hidden;
+    padding-top: 120px;
+  }
+  
+  .SidePanel a {
+    font-family: "Lato", sans-serif;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .SidePanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  .SidePanel .closebtn {
+    position: absolute;
+    top: 124px;
+    right: 5px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .context-menu {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    padding: 3px 0;
+    width: 140px;
+    background-color: #101010;
+    border: solid 1px #FFFFFF;
+    box-shadow: 1px 1px 2px #cfcfcf;
+  }
+
+  .context-menu--active {
+    display: block;
+  }
+  
+  .context-menu__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .context-menu__item {
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .context-menu__item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .context-menu__link {
+    display: block;
+    padding: 4px 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  .context-menu__link:hover {
+    color: #000000;
+    background-color: #FFFFED;
+  }
+
+  /* The Modal (background) */
+  .description-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+  }
+    
+    /* Modal Content */
+    .description-modal-content {
+      position: fixed;
+      bottom: 0;
+      background-color: #101010;
+      width: 100%;
+      -webkit-animation-name: slideIn;
+      -webkit-animation-duration: 0.4s;
+      animation-name: slideIn;
+      animation-duration: 0.4s
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #818181;
+      float: right;
+      font-size: 36px;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #f1f1f1;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .description-modal-header {
+      padding: 2px 16px;
+      background-color: #000000;
+      color: #ffffff;
+      border-top: 1px solid #555555;
+      border-bottom: 1px solid #555555;
+    }
+    
+    .entry {
+      background-color:rgba(0, 0, 0, 0);
+      color:white;
+      border: none;
+      outline:none;
+      height:50px;
+      width: 60%;
+      font-size:18px;
+      transition:height 1s;
+      -webkit-transition:height 1s;
+    }
+
+    .entry2 {
+      font-family: "Lato", sans-serif;
+      background-color:rgba(0, 0, 0, 0);
+      color:white;
+      border: none;
+      outline:none;
+      height:24px;
+      font-size:24px;
+      width: 300px;
+      transition:height 1s;
+      -webkit-transition:height 1s;
+    }
+
+    .description-modal-body {padding: 10px 10px 10px 10px; background-color: #1e1e1e; color: #ffffff;}
+  
+
+    textarea:focus {
+      outline:none;
+  }
+
+    .description-editor {
+      font-family: monospace;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      resize: none;
+      height: 300px;
+      width: 100%;
+      border: none;
+    }
+
+    .description-view {
+      font-family: monospace;
+      background-color: #000000;
+      color: #ffffff;
+      resize: none;
+      height: 300px;
+      width: 100%;
+      border: 1px solid snow;
+      border-radius: 5px;
+    }
+
+    .import {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .drag-item-wrapper {
+      margin: auto;
+      width: 80%;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      border-radius: 5px;
+    }
+
+    .drag-item-wrapper:active {
+      cursor: grabbing;
+    } 
+
+    .drag-item-wrapper:hover {
+      background-color: #232323;
+      cursor: grab;
+      border-radius: 5px;
+    }
+
+    .map-node-drag {
+      margin: auto;
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-color: #333338;
+      border: 1px solid #999999;
+      border-radius: 5px;
+    }
+
+    .note-node-drag {
+      margin: auto;
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-color: #FFFFED;
+      border: 1px solid #999999;
+      border-radius: 5px;
+    }
+
+    .input-export {
+      float: right;
+      max-width: 175px;
+      min-width: 175px;
+      margin-right: 100px;
+    }
+
+  /* images */
+  .warning-logo {
+    float: left;
+    background-image: url('/images/warn.png');
+    width: 64px;
+    height: 64px;
+    margin-right: 9px;
+  }
+
+  .save-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .save-modal-content {
+    width: 500px;
+    height: 100px;
+    margin:0 auto;
+    display:table;
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 50%; 
+    border:1px solid;
+    background-color: #000000;
+    color: #FFFFFF;
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    -o-transform:translateY(-50%);
+    transform:translateY(-50%);
+ }
+
+  .save-modal-header {
+    margin-bottom: 16px;
+    padding: 1px 16px;
+    background-color: #000000;
+    border-bottom: 1px solid #555555;
+    color: #FFFFFF;
+  }
+  
+  .save-modal-body {padding: 2px 16px; vertical-align: middle;}
+  
+  .save-modal-footer {
+    text-align: right;
+    margin-top: 36px;
+    padding: 8px 16px;
+    background-color: #232323;
+    color: black;
+    border-top: 1px solid #555555;
+  }
+
+  a.save-modal-link:link {
+    color: #FFFFFF;
+    margin-left: 2px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a.save-modal-link:visited {
+    color: #FFFFFF;
+  }
+
+  a.save-modal-link:hover {
+    color: #d6d6d6;
+  }
+  
+
+    /* Add Animation */
+    @-webkit-keyframes slideIn {
+      from {bottom: -300px; opacity: 0} 
+      to {bottom: 0; opacity: 1}
+    }
+    
+    @keyframes slideIn {
+      from {bottom: -300px; opacity: 0}
+      to {bottom: 0; opacity: 1}
+    }
+    
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0} 
+      to {opacity: 1}
+    }
+    
+    @keyframes fadeIn {
+      from {opacity: 0} 
+      to {opacity: 1}
+    }
+
+    @media only screen and (max-width: 600px) {
+      /* For mobile phones: */
+      .entry2 {
+        width: 75px;
+      }
+    }

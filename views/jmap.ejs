@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/jmap/main.css" />
+        <title>Jay-Creations - JMap</title>
+    </head>    
+    <body>
+        <header>
+            <h2><input type="text" id="header-title" class="entry2" value="JMap"> <div class="input-export"><label for="file_input"><span class="import">Import</span><input type="file" id="file_input" style="display:none"></label> | <a href="javascript:exportJSON();" style="color: white;">Export</a></div></h1>
+        </header>
+        <div class="node-drag-panel">
+
+          <div class="drag-item-wrapper" title="Map node" id="map-node" draggable="true">
+            <div class="map-node-drag"></div>
+          </div>
+        <br />
+
+          <div class="drag-item-wrapper" title="Note node" id="note-node" draggable="true">
+            <div class="note-node-drag"></div>
+          </div>
+        </div>
+
+        <div id="side-panel" class="SidePanel">
+          <a href="javascript:void(0)" class="closebtn" onclick="closePanel()">×</a>
+          <h2 id="block-name"></h2>
+          <textarea readonly id="block-description" class="description-view"></textarea>
+        </div>
+
+        <canvas id="canvas">The browser doesn't support the canvas element</canvas>
+        
+        
+        <!-- Context Menu -->
+        <nav id="context-menu" class="context-menu" oncontextmenu="return false;">
+            <ul class="context-menu__items">
+              <li class="context-menu__item">
+                <a href="#" class="context-menu__link" data-action="View"><i class="fa fa-edit"></i> View </a>
+                <a href="#" class="context-menu__link" data-action="Edit"><i class="fa fa-edit"></i> Edit </a>
+              </li>
+            </ul>
+        </nav>
+</body>
+
+<div id="description-modal" class="description-modal">
+
+  <!-- Modal content -->
+  <div class="description-modal-content">
+    <div class="description-modal-header">
+      <span class="close">&times;</span>
+      <input type="text" id="node-title" class="entry" maxlength="34" />
+    </div>
+    <div class="description-modal-body">
+      <textarea id="description_editor" class="description-editor"></textarea>
+    </div>
+  </div>
+</div>
+
+
+<script src="/js/jmap/utils.js"></script>
+<script src="/js/jmap/modal.js"></script>
+<script src="/js/jmap/abstract_node.js"></script>
+<script src="/js/jmap/map_node.js"></script>
+<script src="/js/jmap/note_node.js"></script>
+<script src="/js/jmap/env.js"></script>
+<script src="/js/jmap/editor.js"></script>
+<script src="/js/jmap/main.js"></script>
+</html>

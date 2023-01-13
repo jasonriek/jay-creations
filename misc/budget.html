@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monthly Budget Helper</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1
+    BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEDSURBVDhPtdO/TgIxAMfx88/G4sjg4AZM6BNgjLsyuJv4APgqPgAhxNXEkRFHN5h0VCfjoOJiDA74/ZJrUsqFnDH+kk8LvbbX9u6y/8
+    wurvN6y4ayaaCHN3xihndUUSrezUEPuICDu/hVzuAkwTEKs5HXaUb4wAtu0McXSmUPA7h0J7J2FZfYwcp0EAbIc3iM/usAhTlBPNjfbexHbUELC/HkXxF38h1w8BVu87bAyRdyjriDPMRT+CK5l
+    fS617J1C7K0JHKPIzThk0hzaBEm8KDS1ODjcyVF78FzXs/jGYyRLtO9xgcbDDH/PtYsoninOirYxibs840JnuB27jDFX5NlPyHkVqMdkVjuAAAAAElFTkSuQmCC" />
+    <style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+    }
+    span {
+        position:relative;
+        margin-right:-20px
+    }
+
+    table, td, th {
+    border: 1px solid;
+    padding: 6px;
+    }
+
+
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    table.center {
+        margin-left: auto; 
+        margin-right: auto;
+    }
+
+    a.center {
+        text-align: center;
+    }
+
+    input[type='number'] {
+        padding-left:20px;
+        text-align:left;
+        border-width:0px;
+        border:none;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    input[type='text'] {
+        padding-left:20px;
+        text-align:left;
+        border-width:0px;
+        border:none;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    @media print {
+    div.do-not-print {display: none;}
+    p.do-not-print {display: none;}
+    span.do-not-print {display: none;}
+    input.do-not-print {display: none;}
+    a.do-not-print {display: none;}
+    }
+
+        a:link, a:visited {
+    background-color: #0e773a;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    }
+
+    a:hover, a:active {
+    background-color: #119448;
+    }
+
+    .container {
+        max-width: 700px;
+        min-width: 200px;
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table id="budget-table" class="center">
+            <tr><th>Expense</th><th><input type="text" value="Weekly Amount"></th></tr>
+        </table>
+        <div class="do-not-print"><a href="javascript:window.print();" class="center do-not-print" style="float: right;">Print</a></div>
+    </div>
+
+
+<script>
+    function setTwoNumberDecimal(event) {
+        this.value = parseFloat(this.value).toFixed(2);
+    }
+
+    function createBudgetTable()
+    {
+        const ROWS = ['Auto Insurance',
+                    'Car Loan/Lease Payment',
+                    'Cell Phone',
+                    'Clothing, Shoes, Etc...',
+                    'Credit Card Payments',
+                    'Dry Cleaning',
+                    'Electric',
+                    'Food (groceries & restaurants)',
+                    'Fuel',
+                    'Gas (for home)',
+                    'Health Insurance (not deducted from pay)',
+                    'HOA',
+                    'Home Insurance (if not included in mortgage)',
+                    'Internet/Cable',
+                    'Lawn Care',
+                    'Membership Fees',
+                    'Mortgage/Rent/Lease',
+                    'Pest Control',
+                    'Property Taxes',
+                    'Security',
+                    'Sewer',
+                    'Unreimbursed Medical Expense',
+                    'Water',
+                    'Other',
+                    'Total Monthly Expenses'];
+        
+        // Get table
+        let budget_table = document.getElementById('budget-table');
+
+        // create column headers
+        for(let row of ROWS)
+        {
+            let tr = document.createElement('tr');
+            let td_row_name = document.createElement('td');
+            let td_row_input = document.createElement('td');
+            let budget_input = document.createElement('input');
+            let hide_row_chkbox = document.createElement('checkbox');
+            budget_table.appendChild(tr);
+            td_row_name.innerHTML = row;
+            budget_input.setAttribute('type', 'number');
+            budget_input.setAttribute('min', '0.01');
+            budget_input.setAttribute('step', '0.01');
+            budget_input.setAttribute('max', '2500');
+            budget_input.onchange = setTwoNumberDecimal;
+            budget_input.addEventListener('input', (event) => {
+                let names = document.getElementsByName('b');
+                let sum = 0;
+                try {
+                    names.forEach(input => {
+                        if(input.value)
+                            sum += parseFloat(input.value.trim());
+                    });
+                    document.getElementById('total').value = sum.toFixed(2);
+                }
+                catch(error){console.log(error);}
+
+            });
+            if(row === 'Total Monthly Expenses')
+            {
+                budget_input.setAttribute('readonly', true);
+                budget_input.setAttribute('id', `total`);
+                td_row_name.innerHTML = `<b>${row}</b>`;
+            }
+            else
+                budget_input.setAttribute('name', `b`);
+            
+            //budget_input.value='0.00';
+            td_row_input.appendChild(budget_input);
+            td_row_input.setAttribute('style', 'text-align: center;');
+            tr.appendChild(td_row_name);
+            tr.appendChild(td_row_input);
+        }
+    }
+    createBudgetTable();
+    
+</script>
+</body>
+</html>
