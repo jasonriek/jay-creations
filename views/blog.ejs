@@ -1,0 +1,18 @@
+<%- include('partials/_header') -%>
+
+<div class="container">
+  <div class="sub-container">
+      <br />
+      <h2> Blog </h2>
+      <hr />
+      <div class="inner-sub-container">
+          <div class="inner-sub-container-heading"><h3> >> <%= subject %></h3></div>
+          <div class="inner-sub-container-content">
+            <%- content %>
+            <hr />
+            -<%= author %> | <%= creation_time %>
+          </div>
+      </div>
+</div>
+
+<%- include('partials/_footer') -%>

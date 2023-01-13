@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <link rel="stylesheet" href="/css/w3.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <title>Jay -> Creations</title>
+    </head>
+    <body>
+
+    <div class="container">
+        <div class="sub-container">
+
+        <h1>Enter New Blog Post</h1>
+        <form action="blog_write" method="post">
+            <!-- Text area matching the selector specified in the TinyMCE configuration -->
+            <label for="subject">Subject</label><br /><input id="subject" name="SUBJECT" /><br />
+            <label for="author">Author</label><br /><input id="author" name="AUTHOR" /><br />
+            <textarea id="my-expressjs-tinymce-app">Hello, World!</textarea>
+            <input type="hidden" id="blog-content", name="CONTENT" />
+            <hr />
+            <input id="submit-button" type="submit" style="display: none;" />
+            <a id="submit" href="javascript:void(0);"> Submit </a>
+            <a href="#"> Cancel </a>
+        </form>
+
+        <!-- Script element sourcing TinyMCE -->
+        <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>
+        <!-- Script element sourcing the TinyMCE configuration -->
+        <script type="application/javascript" src= "/js/my-tinymce-config.js"></script>
+        <script type="application/javascript" src ="/js/blog.js"></script>
+
+        </div>
+    </div>
+</body> 
+</html>
