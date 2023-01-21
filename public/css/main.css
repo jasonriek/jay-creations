@@ -12,8 +12,26 @@ html {
     width: 100%;
 }
 
+.login-banner {
+  font-family: "Audiowide", sans-serif;
+  font-size: 48px;
+  color: #FFFFFF;
+}
+
+.center-login-container {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+
 hr {
     border: 1px solid #555555;
+}
+
+.white-hr {
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 1px solid #FFFFFF;
 }
 
 body {
@@ -29,6 +47,20 @@ body {
 
 input {
   width: 100%;
+}
+
+.last-link {
+  float: left;
+  margin-left: 9px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.next-link {
+  float: right;
+  margin-right: 9px;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 nav.navigation
@@ -61,6 +93,7 @@ nav.navigation
     color: #FFFFFF;
     display: flex;
     justify-content: center;
+    padding-bottom: 128px;
 }
 
 .sub-container {
@@ -74,6 +107,7 @@ nav.navigation
     padding: 32px;
     width: 100%;
     height: 100%;
+
 }
 
   .inner-sub-container {
@@ -120,14 +154,12 @@ nav.navigation
   .sidepanel a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
     display: block;
     transition: 0.3s;
   }
   
   .sidepanel a:hover {
-    color: #f1f1f1;
+    color: #c0bebe;
   }
   
   .sidepanel .closebtn {
@@ -269,6 +301,10 @@ nav.navigation
         width: 100%;
         border-bottom: none;
     }
+
+    img {
+      object-fit: cover;
+    }
   }
   
   @media only screen and (max-width: 620px) {
@@ -280,9 +316,106 @@ nav.navigation
       width: 100%;
       border-bottom: none;
   }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
   
     video {
       width: 100px;
       height: 100px;
     }
   }
+
+ /*General style */
+
+ .accordion {
+  background-color: #000000;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding-top: 8px;
+  padding-right: 36px;
+  padding-left: 32px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 24px;
+  transition: 0.4s;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.active, .accordion:hover {
+  background-color: #000000;
+}
+
+.accordion:after {
+  position: absolute;
+  right: 15px;
+  content:"\203A";
+  transform: rotate(90deg);
+  color: #FFFFFF;
+  font-size: 36px;
+  font-family: monospace;
+}
+
+.active:after {
+  content: "\203A";
+  transform: rotate(0deg);
+  font-size: 36px;
+  font-family: monospace;
+}
+
+.accordian-panel {
+  padding: 0 18px;
+  background-color: #000000;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-size: 18px;
+}
+
+.header-banner {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 62px;
+  color: #DDDDDD;
+  background-color: #000000;
+  border-top: 1px solid #555555;
+  text-align:center;
+  padding:10px;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.footer-banner {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 62px;
+  color: #DDDDDD;
+  background-color: #000000;
+  border-top: 1px solid #555555;
+  text-align:center;
+  padding:10px;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.master-container {
+  min-height:100%;
+  position:relative;
+}

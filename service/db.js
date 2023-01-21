@@ -1,12 +1,17 @@
 const path = require('path');
-const db_path = path.join(__dirname, 'jc.db');
 const Database = require('better-sqlite3');
+
+const db_path = path.join(__dirname, 'jc.db');
 const database = new Database(db_path, { verbose: console.log });
+
+let settings = {
+    database: database
+}
 
 // Creates a single SQLite table
 function createTable(table_name, sql) {
     try {
-        const table_create_query = database.prepare(sql);
+        const table_create_query = settings.database.prepare(sql);
         table_create_query.run();
         console.log(`Successful creation of "${table_name}" table!`);
     }
@@ -28,7 +33,7 @@ function insert(table_name, columns, values, append_datetime=false) {
         else {
                 sql = `INSERT INTO ${table_name} (${columns.join(',')}) VALUES (${value_place_holder.join(',')});`;
         }
-        const insert_query = database.prepare(sql);
+        const insert_query = settings.database.prepare(sql);
         insert_query.run(values);
     }
     catch(error){return console.error(error);}
@@ -39,7 +44,7 @@ function insert(table_name, columns, values, append_datetime=false) {
 function read(table_name, condition_column, condition_value) {
     try {
         const sql = `SELECT * FROM ${table_name} WHERE ${condition_column} = ?;`;
-        const read_query = database.prepare(sql);
+        const read_query = settings.database.prepare(sql);
         let row = read_query.get([condition_value]);
         return row;
     }
@@ -51,7 +56,7 @@ function read(table_name, condition_column, condition_value) {
 function readAll(table_name) {
     try {
         const sql = `SELECT * FROM ${table_name};`;
-        const read_query = database.prepare(sql);
+        const read_query = settings.database.prepare(sql);
         let rows = read_query.all();
         return rows;
     }
@@ -70,7 +75,7 @@ function update(table_name, update_column, update_value, has_condition=false, co
             sql = `UPDATE ${table_name} SET ${update_column} = ?`;
         }
 
-        const update_query = database.prepare(sql);
+        const update_query = settings.database.prepare(sql);
         if(has_condition) {
             update_query.run([update_value, condition_value]);
         }
@@ -85,7 +90,7 @@ function update(table_name, update_column, update_value, has_condition=false, co
 // Delete a row from the table that meets the condition value.
 function remove(table_name, condition_column, condition_value) {
     try {
-        const delete_query = database.prepare(`DELETE FROM ${table_name} WHERE ${condition_column} = ?;`);
+        const delete_query = settings.database.prepare(`DELETE FROM ${table_name} WHERE ${condition_column} = ?;`);
         delete_query.run([condition_value]);
     }
     catch(error){return console.error(error);}
@@ -99,5 +104,6 @@ module.exports = {
     readAll,
     update,
     remove,
+    settings,
     database
 }

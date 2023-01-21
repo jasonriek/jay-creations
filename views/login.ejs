@@ -1,0 +1,33 @@
+<%- include('partials/_header') -%>
+
+<div class="container">
+  <div class="sub-container">
+      <br />
+        <div class="center-login-container">
+            <div class="login-banner">Login</div>
+            <hr />
+            <%- message %>
+            Try accessing <a href="/blog_write">/blog_write</a>
+            <hr />  
+            <form method="post" action="/login">
+                <div style="text-align: left;">
+                <h2><label for="username">Username:</label></h1>
+                <p>
+                  <input type="text" name="username" id="username">
+                </p>
+                <br />
+                <h2><label for="password">Password:</label></h1>
+                <p>
+                  <input type="password" name="password" id="password">
+                </p>
+            </div>
+                <br /><br />
+                <p>
+                  <input id="enter-button" type="submit" value="Enter">
+                </p>
+                </form>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/_footer') -%>

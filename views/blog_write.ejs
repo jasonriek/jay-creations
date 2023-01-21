@@ -4,7 +4,7 @@
         <div class="sub-container">
 
         <h1>Enter New Blog Post</h1><br />
-        <form action="/blog_write" method="post" enctype="multipart/form-data" id="form">
+        <form action="/blog_write" method="post" id="form">
             <!-- Text area matching the selector specified in the TinyMCE configuration -->
             <label for="theme">Blog Theme</label><br /><select name="THEME" id="theme">
                 <% for(let row of themes) { %>
@@ -14,12 +14,12 @@
             <br /><br />
             <label for="subject">Subject</label><br /><input id="subject" name="SUBJECT" /><br /><br />
             <label for="author">Author</label><br /><input id="author" name="AUTHOR" /><br /><br />
-            <label for="files"></label><input id="files" type="file" name="FILES" accept="image/*" multiple><br /><br />
+            <label for="files"></label><input id="image" type="file" name="IMAGE" accept="image/*"><br /><br />
             <textarea id="my-expressjs-tinymce-app"></textarea>
             <input type="hidden" id="blog-content", name="CONTENT" />
             <hr />
             <input id="submit-button" type="submit" value="Submit" />
-            <a href="#"> Cancel </a>
+            <a href="/"> Cancel </a>
         </form>
 
         <!-- Script element sourcing TinyMCE -->
@@ -29,5 +29,6 @@
         <script type="application/javascript" src ="/js/blog.js"></script>
 
         </div>
+        
     </div>
 <%- include('partials/_footer') -%>

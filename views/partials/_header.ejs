@@ -25,8 +25,26 @@
             </div>
             <div id="mySidepanel" class="sidepanel">
                 <a href="/">Home</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Blog</a>
+         
+                <button class="accordion">Blog</i></button>
+                <div class="accordian-panel">
+                  <a href="/blog/philosophy/1">Philosophy</a>
+                </div>
+
+                <button class="accordion">Projects</i></button>
+                <div class="accordian-panel">
+                  <a href="/projects/jmap">JMap</a>
+                </div>
+
                 <a href="https://github.com/jasonriek">Github</a>
+                <hr class="white-hr" />
+                <% if(user) { %>
+                    <a href="/logout">Logout</a>
+                <% } else { %>
+                    <a href="/login">Login</a>
+                <% } %>
+    
+
             </div>
         </nav>
+        <div class="master-container">
