@@ -157,13 +157,13 @@ function exportJSON()
     download_link.click();
 }
 
-function saveJSON()
+function saveJSON(map_name)
 {
     document.getElementById('close').click(); // close the save prompt
     let json = getExportJSON();
     json = JSON.stringify(json, null, 3);
 
-    fetch('/projects/jmap/conciousness', {
+    fetch(`/projects/jmap/${map_name}`, {
         method: 'POST',
         body: json,
         headers: {'Content-type': 'application/json;charset=UTF-8'}
@@ -222,21 +222,26 @@ note_node_drag.addEventListener('dragend', function(e) {
 
 environment.draw();
 
-let url = window.location.href;
-let correct_url = (url === 'http://www.jay-creations.com/projects/jmap/conciousness' || url === 'http://jay-creations.com/projects/jmap/conciousness');
-if(correct_url)
-{
-    fetch('/projects/jmap/conciousness/data')
-      .then((response) => {
-        return response.json()
-      })
-      .then((data) => {
-        // Work with JSON data here
-        environment.loadNewNodesFromJSON(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
+
+function loadMap(map_name) {
+    let url = window.location.href;
+    let correct_url = (url === `http://www.jay-creations.com/projects/jmap/${map_name}` || 
+                       url === `http://jay-creations.com/projects/jmap/${map_name}`);
+    if(correct_url)
+    {
+        fetch(`/projects/jmap/${map_name}/data`)
+          .then((response) => {
+            return response.json()
+          })
+          .then((data) => {
+            // Work with JSON data here
+            environment.loadNewNodesFromJSON(data);
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+    }
 }
+
 
 

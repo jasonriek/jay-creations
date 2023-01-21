@@ -12,9 +12,13 @@ const USERNAME_COLUMN = 'USERNAME';
 const SALT_COLUMN = 'SALT';
 const HASH_COLUMN = 'HASH';
 
-function createBlogTable()
+const BLOG_THEME_TABLE = 'BLOG_THEME';
+const BLOG_THEME_COL = 'THEME';
+
+function createBlogTable(theme)
 {
-    db.createTable(ADMIN_USER_TABLE, `CREATE TABLE IF NOT EXISTS ${BLOG_TABLE} (
+    theme = theme.trim().toUpperCase();
+    db.createTable(BLOG_TABLE, `CREATE TABLE IF NOT EXISTS ${theme}_${BLOG_TABLE} (
         id INTEGER PRIMARY KEY,
         ${AUTHOR_COLUMN} TEXT NOT NULL,
         ${SUBJECT_COLUMN} TEXT NOT NULL,
@@ -22,6 +26,15 @@ function createBlogTable()
         ${CREATION_TIME_COLUMN} DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL);`);
 }
 
+function createBlogThemeTable()
+{
+    db.createTable(BLOG_THEME_TABLE, `CREATE TABLE IF NOT EXISTS ${BLOG_THEME_TABLE} (
+        id INTEGER PRIMARY KEY,
+        ${BLOG_THEME_COL} TEXT NOT NULL
+    );`)
+}
+
+/*
 function createAdminUserTable()
 {
     db.createTable(ADMIN_USER_TABLE, `CREATE TABLE IF NOT EXISTS ${ADMIN_USER_TABLE} (
@@ -31,7 +44,6 @@ function createAdminUserTable()
         ${HASH_COLUMN} TEXT NOT NULL);`);
 }
 
-/*
 function insertAdminUser(username, password)
 {
     hash({password: password}, function(err, pass, salt, hash) {
@@ -79,9 +91,10 @@ function adminUsername(username)
 
 */
 
-function insertBlog(subject, author, content)
+function insertBlog(theme, subject, author, content)
 {
-    db.insert(BLOG_TABLE, 
+    theme = theme.trim().toUpperCase();
+    db.insert(`${theme}_${BLOG_TABLE}`, 
         [
             SUBJECT_COLUMN,
             AUTHOR_COLUMN,
@@ -95,19 +108,42 @@ function insertBlog(subject, author, content)
         ], true);
 }
 
-function getBlogs()
+function checkIfBlogThemeExists(theme)
 {
-    return db.readAll(BLOG_TABLE);
+    return db.read(BLOG_THEME_TABLE, BLOG_THEME_COL, theme);
 }
 
-function getBlog(id)
+function insertBlogTheme(theme)
 {
-    return db.read(BLOG_TABLE, 'id', id);
+    db.insert(BLOG_THEME_TABLE, [BLOG_THEME_COL], [theme], false);
+}
+
+function getBlogThemes()
+{
+    let themes = db.readAll(BLOG_THEME_TABLE);
+    console.log(themes);
+    return themes;
+}
+
+function getBlogs(theme)
+{
+    theme = theme.trim().toUpperCase();
+    return db.readAll(`${theme}_${BLOG_TABLE}`);
+}
+
+function getBlog(theme, id)
+{
+    theme = theme.trim().toUpperCase();
+    return db.read(`${theme}_${BLOG_TABLE}`, 'id', id);
 }
 
 module.exports = {
     createBlogTable,
     insertBlog,
     getBlog,
-    getBlogs
+    getBlogs,
+    createBlogThemeTable,
+    insertBlogTheme,
+    getBlogThemes,
+    checkIfBlogThemeExists
 }

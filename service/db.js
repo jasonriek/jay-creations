@@ -52,7 +52,7 @@ function readAll(table_name) {
     try {
         const sql = `SELECT * FROM ${table_name};`;
         const read_query = database.prepare(sql);
-        let rows = read_query.all([condition_value]);
+        let rows = read_query.all();
         return rows;
     }
     catch(error){return console.error(error);}

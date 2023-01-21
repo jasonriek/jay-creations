@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="/css/jmap/main.css" />
         <title>Jay-Creations - JMap</title>
     </head>    
-    <body>
+    <body onload="loadMap('<%= map_name %>');">
         <header>
             <h2><input type="text" id="header-title" class="entry2" value="JMap"> 
               <div class="input-export" style="max-width: 250px">
@@ -73,14 +73,14 @@
         Are you sure you want to save? Last save state will be overwritten.
     </div>
     <div class="save-modal-footer">
-      <a class="save-modal-link" href="javascript:saveJSON();" style="margin-right: 4px;"/>Confirm</a>
+      <a class="save-modal-link" href="javascript:saveJSON('<%= map_name %>');" style="margin-right: 4px;"/>Confirm</a>
         <a class="save-modal-link" href="javascript:document.getElementById('close').click();">Cancel</a>
 
      </div>
   </div>
 </div>
 
-
+<script src="/js/jmap/roundRect.js"></script>
 <script src="/js/jmap/utils.js"></script>
 <script src="/js/jmap/modal.js"></script>
 <script src="/js/jmap/abstract_node.js"></script>

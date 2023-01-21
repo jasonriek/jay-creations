@@ -1,0 +1,155 @@
+{
+   "name": "Metaphysics",
+   "nodes": {
+      "note_nodes": {
+         "Metaphysics": {
+            "description": "Metaphysics",
+            "x": 512.5,
+            "y": 434.5,
+            "w": 81,
+            "h": 31,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "Metaphysics",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_1"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "Aristotle",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Metaphysics"
+               }
+            ]
+         },
+         "note_nodes_1": {
+            "description": "Riddles of Existence ",
+            "x": 633,
+            "y": 482,
+            "w": 137,
+            "h": 27,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "Metaphysics",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_1"
+               }
+            ]
+         },
+         "Aristotle": {
+            "description": "Aristotle",
+            "x": 887,
+            "y": 378.5,
+            "w": 73,
+            "h": 28.5,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "Aristotle",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Metaphysics"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "Aristotle",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_2"
+               }
+            ],
+            "input_connections": []
+         },
+         "note_nodes_2": {
+            "description": "\"first philosophy\"",
+            "x": 1086.5,
+            "y": 212.5,
+            "w": 123,
+            "h": 27,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_2",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "The science of   being qua being"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "Aristotle",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_2"
+               }
+            ]
+         },
+         "note_nodes_3": {
+            "description": "general nature of existence",
+            "x": 1344,
+            "y": 453,
+            "w": 182,
+            "h": 27,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_3",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_4"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "The science of   being qua being",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_3"
+               }
+            ]
+         },
+         "note_nodes_4": {
+            "description": "Existence does not seem\nto be a separate property\nthat can be added or\ndeleted.",
+            "x": 1565,
+            "y": 511,
+            "w": 166,
+            "h": 62,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_3",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_4"
+               }
+            ]
+         }
+      },
+      "map_nodes": {
+         "The science of   being qua being": {
+            "description": "The term \"science\" here means theoretical\nknowledge.",
+            "x": 1194,
+            "y": 284,
+            "w": 128,
+            "h": 64,
+            "output_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "The science of   being qua being",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_3"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_2",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "The science of   being qua being"
+               }
+            ]
+         }
+      }
+   }
+}
