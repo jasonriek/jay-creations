@@ -49,7 +49,7 @@ function login_post (req, res, next) {
           req.session.user = user;
           req.session.success = 'Authenticated' 
             + ' click to <a href="/logout">logout</a>. '
-            + ' You may now access <a href="/blog/blog_write">Blog Writer</a>.';
+            + ' You may now access <a href="/blog_write">/blog_write</a>.';
           res.redirect('back');
           //res.render('blog_write');
 

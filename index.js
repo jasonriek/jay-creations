@@ -145,6 +145,11 @@ app.get('/videos', (req, res) => {
     res.render('videos', context);
 });
 
+app.get('/music', (req, res) => {
+    let context = {};
+    res.render('music', context);
+});
+
 app.get('/projects/jmap', (req, res) => {
     let context = {};
     res.render('jmap', context);

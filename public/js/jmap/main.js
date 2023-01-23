@@ -225,8 +225,8 @@ environment.draw();
 
 function loadMap(map_name) {
     let url = window.location.href;
-    let correct_url = (url === `http://www.jay-creations.com/projects/jmap/${map_name}` || 
-                       url === `http://jay-creations.com/projects/jmap/${map_name}`);
+    let correct_url = (url === `https://www.jay-creations.com/projects/jmap/${map_name}` || 
+                       url === `https://jay-creations.com/projects/jmap/${map_name}`);
     if(correct_url)
     {
         fetch(`/projects/jmap/${map_name}/data`)

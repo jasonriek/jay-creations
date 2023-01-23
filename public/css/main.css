@@ -22,10 +22,21 @@ html {
   text-align: center;
   margin: auto;
   padding: 10px;
+  width: 50%;
 }
 
 hr {
     border: 1px solid #555555;
+}
+
+.img-border {
+  border: 1px solid #555555;
+}
+
+.text-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .white-hr {
@@ -115,12 +126,12 @@ nav.navigation
     padding-bottom: 16px;
     font-family: 'Courier New', monospace;
     text-align: left;
-    background-color: #000000;
+    /*background-color: #000000;
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
     border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;*/
   }
 
   .inner-sub-container-heading {
@@ -292,7 +303,7 @@ nav.navigation
     text-align: center;
   }
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1200px) {
     /* For mobile phones: */
     .sub-container {
         margin-left: 0;
@@ -303,7 +314,9 @@ nav.navigation
     }
 
     img {
+      width: 100%;
       object-fit: cover;
+
     }
   }
   
@@ -315,17 +328,21 @@ nav.navigation
       height: 100%;
       width: 100%;
       border-bottom: none;
-  }
+      }
 
-  img {
-    width: 100%;
-    object-fit: contain;
-  }
-  
-    video {
-      width: 100px;
-      height: 100px;
-    }
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+      
+        video {
+          width: 100px;
+          height: 100px;
+        }
+    
+      .center-login-container {
+        width: 100%;
+      }
   }
 
  /*General style */

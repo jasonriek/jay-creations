@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <link rel="stylesheet" href="/css/w3.css">
+        <link rel="stylesheet" href="/css/music_player.css">
+        <title>Jay -> Creations</title>
+    </head>
+    <body>
+        
+        <nav class="navigation">
+            <div class="nav-container">
+                <input class="checkbox" type="checkbox" name="" id="hamburger-menu" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+            </div>
+            <div class="center-container">
+                <span class="header-title">Jay -> Creations</span>
+            </div>
+            <div id="mySidepanel" class="sidepanel">
+                <a href="/">Home</a>
+         
+                <button class="accordion">Blog</i></button>
+                <div class="accordian-panel">
+                  <a href="/blog/philosophy/1">Philosophy</a>
+                </div>
+
+                <button class="accordion">Projects</i></button>
+                <div class="accordian-panel">
+                  <a href="/projects/jmap">JMap</a>
+                </div>
+                <a href="/music">Music</a>
+                <a href="https://github.com/jasonriek">Github</a>
+                <hr class="white-hr" />
+                <% if(user) { %>
+                    <a href="/logout">Logout</a>
+                <% } else { %>
+                    <a href="/login">Login</a>
+                <% } %>
+    
+
+            </div>
+        </nav>
+        <div class="master-container">
