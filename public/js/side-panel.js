@@ -1,12 +1,14 @@
 let nav_open = false;
 let hamburger_menu = document.getElementById("hamburger-menu");
+hamburger_menu.checked = false;
 
 function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
 }
 
-function openNav() {
-    nav_open = !nav_open;
+function openNav() {  
+  nav_open = !nav_open;
+    
     if(nav_open)
         document.getElementById("mySidepanel").style.width = "275px";
     else

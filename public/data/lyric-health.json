@@ -1,0 +1,346 @@
+{
+   "name": "Lyric's Health Map",
+   "nodes": {
+      "note_nodes": {
+         "note_nodes_1": {
+            "description": "Lyric's height & weight",
+            "x": 1289.25,
+            "y": 809.625,
+            "w": 157.5,
+            "h": 28.75,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_2",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_1"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_3",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_1"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_8",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_1"
+               }
+            ]
+         },
+         "note_nodes_2": {
+            "description": "Parent's genetics ",
+            "x": 981.5,
+            "y": 429.25,
+            "w": 119,
+            "h": 29.5,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_2",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_1"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_2",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_7"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_2",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_4"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_9",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_2"
+               }
+            ]
+         },
+         "note_nodes_3": {
+            "description": "Picky eating habits, low\ncalorie intake.",
+            "x": 895.5,
+            "y": 16.5,
+            "w": 163,
+            "h": 43,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_3",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_1"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_3",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_4"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_3",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_6"
+               }
+            ],
+            "input_connections": []
+         },
+         "note_nodes_4": {
+            "description": "Related?",
+            "x": 1411,
+            "y": 403.25,
+            "w": 84,
+            "h": 39.5,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_4",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Any studies to support this?"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_2",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_4"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_3",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_4"
+               }
+            ]
+         },
+         "Any studies to support this?": {
+            "description": "Any studies to support this?",
+            "x": 1450.25,
+            "y": 535.75,
+            "w": 187.5,
+            "h": 28.5,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "Any studies to support this?",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "List of Studies"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_4",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Any studies to support this?"
+               }
+            ]
+         },
+         "note_nodes_5": {
+            "description": "Allergies",
+            "x": 551.5,
+            "y": 6.5,
+            "w": 81,
+            "h": 29,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_5",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_9"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_5",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_6"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_5",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_12"
+               }
+            ],
+            "input_connections": []
+         },
+         "note_nodes_6": {
+            "description": "Related?",
+            "x": 683,
+            "y": 221,
+            "w": 78,
+            "h": 26,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_3",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_6"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_5",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_6"
+               }
+            ]
+         },
+         "note_nodes_7": {
+            "description": "Father & mother \nare thin, and come from a \nfamily of relatively small \npeople.\n",
+            "x": 767,
+            "y": 348,
+            "w": 172,
+            "h": 64,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_2",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_7"
+               }
+            ]
+         },
+         "note_nodes_8": {
+            "description": "EpicGenetic\n(Environmentally\n influenced)",
+            "x": 857,
+            "y": 670.25,
+            "w": 114,
+            "h": 51.5,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_8",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_1"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_9",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_8"
+               }
+            ]
+         },
+         "note_nodes_9": {
+            "description": "If present, origin?",
+            "x": 544.193359375,
+            "y": 490.865234375,
+            "w": 141.61328125,
+            "h": 38.26953125,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_9",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_2"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_9",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_8"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_9",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_11"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_9",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_10"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_5",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_9"
+               }
+            ]
+         },
+         "note_nodes_10": {
+            "description": "Both?",
+            "x": 741.2255859375,
+            "y": 776.578125,
+            "w": 65.548828125,
+            "h": 38.84375,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_9",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_10"
+               }
+            ]
+         },
+         "note_nodes_11": {
+            "description": "Other?",
+            "x": 830.478515625,
+            "y": 763.8671875,
+            "w": 65.04296875,
+            "h": 38.265625,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_9",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_11"
+               }
+            ]
+         },
+         "note_nodes_12": {
+            "description": "Amoxicillin\nreaction",
+            "x": 418.5,
+            "y": 228.5,
+            "w": 85,
+            "h": 41,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "note_nodes_5",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_12"
+               }
+            ]
+         }
+      },
+      "map_nodes": {
+         "List of Studies": {
+            "description": "",
+            "x": 1587,
+            "y": 661,
+            "w": 128,
+            "h": 64,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "Any studies to support this?",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "List of Studies"
+               }
+            ]
+         }
+      }
+   }
+}

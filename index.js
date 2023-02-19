@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const session = require('express-session');
 const login_routes = require('./routes/login');
+const jmap_routes = require('./routes/jmaps');
 const body_parser = require('body-parser');
 const fs = require('fs');
 const db = require('./service/sql');
@@ -155,13 +156,15 @@ app.get('/projects/jmap', (req, res) => {
     res.render('jmap', context);
 });
 
-app.get('/projects/jmap/:map_name', (req, res) => {
-    let map_name = req.params.map_name;
-    let context = {map_name: map_name};
-    res.render('jmap_loaded', context);
-});
+// JMap Routes 
+jmap_routes.selectJMap(app, 'CONSCIOUSNESS'); 
+jmap_routes.selectJMap(app, 'LYRIC_HEALTH');
+jmap_routes.selectJMap(app, 'METAPHYSICS');
+jmap_routes.selectJMap(app, 'SAVOIE_SOUL_THEORY');
 
-app.post('/projects/jmap/:map_name', (req, res) => {
+app.post('/projects/jmap/:map_name', 
+(req, res) => {
+
     let json = req.body;
     let json_string = JSON.stringify(json, null, 3);
     let map_name = req.params.map_name;

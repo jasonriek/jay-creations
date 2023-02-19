@@ -4,8 +4,8 @@
       "note_nodes": {
          "Not AI": {
             "description": "Consciousness cannot be created \nthrough computational Artificial \nIntelligence.",
-            "x": 2121.5,
-            "y": 765,
+            "x": 1813.5,
+            "y": 1244,
             "w": 209,
             "h": 54,
             "output_connections": [],
@@ -32,8 +32,8 @@
          },
          "Analytical Idealism": {
             "description": "Analytical Idealism",
-            "x": 1091.5,
-            "y": 625.5,
+            "x": 783.5,
+            "y": 1104.5,
             "w": 131,
             "h": 29,
             "output_connections": [
@@ -79,8 +79,8 @@
          },
          "note_nodes_2": {
             "description": "Consciousness is Fundamental",
-            "x": 1214.25,
-            "y": 861.25,
+            "x": 906.25,
+            "y": 1340.25,
             "w": 188.75,
             "h": 25.75,
             "output_connections": [
@@ -108,8 +108,8 @@
          },
          "Consciousness": {
             "description": "Consciousness",
-            "x": 595.75,
-            "y": 669.625,
+            "x": 287.75,
+            "y": 1148.625,
             "w": 96.25,
             "h": 32.375,
             "output_connections": [
@@ -124,8 +124,8 @@
          },
          "note_nodes_3": {
             "description": "Materialism is an instrument to\nmeasure reality, but is not \nreality in itself. ",
-            "x": 1588,
-            "y": 903.5,
+            "x": 1280,
+            "y": 1382.5,
             "w": 208,
             "h": 55,
             "output_connections": [
@@ -153,8 +153,8 @@
          },
          "Bernardo Kastrup": {
             "description": "Bernardo Kastrup",
-            "x": 1694,
-            "y": 514.5,
+            "x": 1386,
+            "y": 993.5,
             "w": 112,
             "h": 33,
             "output_connections": [
@@ -194,8 +194,8 @@
          },
          "note_nodes_4": {
             "description": "The World as Will and Representation (Book)",
-            "x": 1165,
-            "y": 487.5,
+            "x": 857,
+            "y": 966.5,
             "w": 274,
             "h": 27,
             "output_connections": [
@@ -235,8 +235,8 @@
          },
          "Being and Time": {
             "description": "Being and Time (Book)",
-            "x": 263.25,
-            "y": 394.5,
+            "x": -44.75,
+            "y": 873.5,
             "w": 145.5,
             "h": 31,
             "output_connections": [
@@ -258,8 +258,8 @@
          },
          "Federico Faggin": {
             "description": "Federico Faggin (Micro Processor Inventor)",
-            "x": 1608,
-            "y": 633.75,
+            "x": 1300,
+            "y": 1112.75,
             "w": 270,
             "h": 28.5,
             "output_connections": [
@@ -287,8 +287,8 @@
          },
          "note_nodes_1": {
             "description": "Division of Object and Subject",
-            "x": 1423,
-            "y": 325.75,
+            "x": 1115,
+            "y": 804.75,
             "w": 200,
             "h": 30.5,
             "output_connections": [],
@@ -309,8 +309,8 @@
          },
          "note_nodes_5": {
             "description": "Principle of Sufficient Reason",
-            "x": 796.5,
-            "y": 222,
+            "x": 488.5,
+            "y": 701,
             "w": 203,
             "h": 30,
             "output_connections": [
@@ -332,8 +332,8 @@
          },
          "note_nodes_6": {
             "description": "Gottfried Wilhelm Leibniz",
-            "x": 681.5,
-            "y": 118,
+            "x": 373.5,
+            "y": 597,
             "w": 163,
             "h": 32,
             "output_connections": [
@@ -348,8 +348,8 @@
          },
          "note_nodes_7": {
             "description": "All our representations are \nobjects for the subject, and \nall objects of the subject \nare our representations.",
-            "x": 1209,
-            "y": 204.5,
+            "x": 901,
+            "y": 683.5,
             "w": 184,
             "h": 73,
             "output_connections": [
@@ -371,8 +371,8 @@
          },
          "Immanuel Kant": {
             "description": "Immanuel Kant",
-            "x": 669,
-            "y": -7.5,
+            "x": 361,
+            "y": 471.5,
             "w": 96,
             "h": 33,
             "output_connections": [
@@ -387,8 +387,8 @@
          },
          "a priori": {
             "description": "a priori",
-            "x": 1256.5,
-            "y": 107.5,
+            "x": 948.5,
+            "y": 586.5,
             "w": 63,
             "h": 29,
             "output_connections": [],
@@ -403,8 +403,8 @@
          },
          "note_nodes_9": {
             "description": "Third Aspect of the Principle \nof Sufficient Reason",
-            "x": 589.75,
-            "y": 530.75,
+            "x": 281.75,
+            "y": 1009.75,
             "w": 188.5,
             "h": 38.5,
             "output_connections": [],
@@ -425,8 +425,8 @@
          },
          "Schopenhauer": {
             "description": "Arthur Schopenhauer",
-            "x": 1006.25,
-            "y": 317,
+            "x": 698.25,
+            "y": 796,
             "w": 129.5,
             "h": 26,
             "output_connections": [
@@ -478,8 +478,8 @@
          },
          "Heidegger": {
             "description": "Martin Heidegger",
-            "x": 60.5,
-            "y": 272,
+            "x": -247.5,
+            "y": 751,
             "w": 121.5,
             "h": 28,
             "output_connections": [
@@ -507,8 +507,8 @@
          },
          "note_nodes_10": {
             "description": "Fourfold Root of \nthe Principle of \nSufficient Reason",
-            "x": 732.25,
-            "y": 407.75,
+            "x": 424.25,
+            "y": 886.75,
             "w": 123.5,
             "h": 52.5,
             "output_connections": [
@@ -542,8 +542,8 @@
          },
          "note_nodes_11": {
             "description": " Critique of Pure Reason (Book)",
-            "x": 979,
-            "y": 52,
+            "x": 671,
+            "y": 531,
             "w": 210,
             "h": 34,
             "output_connections": [
@@ -571,8 +571,8 @@
          },
          "Will": {
             "description": "Will",
-            "x": 1696,
-            "y": 394,
+            "x": 1388,
+            "y": 873,
             "w": 39,
             "h": 27,
             "output_connections": [
@@ -594,8 +594,8 @@
          },
          "note_nodes_8": {
             "description": "Matter has no essence \nindependent of mental\nperception",
-            "x": 2091.5,
-            "y": 577.5,
+            "x": 1783.5,
+            "y": 1056.5,
             "w": 171,
             "h": 55,
             "output_connections": [
@@ -623,8 +623,8 @@
          },
          "deconstruction": {
             "description": "Deconstruction",
-            "x": -73,
-            "y": 408,
+            "x": -381,
+            "y": 887,
             "w": 108,
             "h": 26,
             "output_connections": [],
@@ -639,8 +639,8 @@
          },
          "phenomenology": {
             "description": "Phenomenology",
-            "x": -64.5,
-            "y": 127,
+            "x": -372.5,
+            "y": 606,
             "w": 99,
             "h": 30,
             "output_connections": [
@@ -652,13 +652,29 @@
                }
             ],
             "input_connections": []
+         },
+         "note_nodes_12": {
+            "description": "People organize their multiple \npersonalities into separate \n\"me\" themes. ",
+            "x": 1609.5,
+            "y": 556.5,
+            "w": 195,
+            "h": 59,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "Autism - Schizophrenia Spectrum",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_12"
+               }
+            ]
          }
       },
       "map_nodes": {
          "Example (1)": {
             "description": "If I were to view a person in\na live stream on a computer screen, \nI would be mistaken to think that \nthe pixels moving on the screen\nrepresenting the person, was actually\nthe person.",
-            "x": 1760,
-            "y": 1005,
+            "x": 1452,
+            "y": 1484,
             "w": 128,
             "h": 64,
             "output_connections": [],
@@ -673,8 +689,8 @@
          },
          "Payne's Summary": {
             "description": "In his Translator's Introduction to Schopenhauer's The World as Will and Representation, E. F. J. Payne concisely summarized the Fourfold Root.\n\nOur knowing consciousness...is divisible solely into \nsubject and object. To be object for the subject and \nto be our representation or mental picture are one \nand the same. All our representations are objects \nfor the subject, and all objects of the subject are \nour representations. These stand to one \nanother in a regulated connection which in form \nis determinable a priori, and by virtue of this \nconnection nothing existing by itself and independent, \nnothing single and detached, can become an object for us.\n\nThe first aspect  of this principle is that of becoming, \nwhere it appears as the law of causality and is applicable \nonly to changes. Thus if the cause is given, the effect \nmust of necessity follow. \n\nThe second aspect deals with concepts or abstract \nrepresentations, which are themselves drawn from \nrepresentations of intuitive perception, and here \nthe principle of sufficient reason states that, \nif certain premises are given, the conclusion \nmust follow. \n\nThe third aspect of the principle is concerned with \nbeing in space and time, and shows that the existence \nof one relation inevitably implies the other, thus that \nthe equality of the angles of a triangle necessarily \nimplies the equality of its sides and vice versa. \n\nFinally, the fourth aspect deals with actions, and \nthe principle appears as the law of motivation, which \nstates that a definite course of action inevitably \nensues on a given character and motive.",
-            "x": 935,
-            "y": 445,
+            "x": 627,
+            "y": 924,
             "w": 128,
             "h": 64,
             "output_connections": [],
@@ -689,8 +705,8 @@
          },
          "Explanation (1)": {
             "description": "It happens\nbefore materialization,\neverything comes out of\nconsciousness, it's the\nprimary substance.",
-            "x": 1320,
-            "y": 967,
+            "x": 1012,
+            "y": 1446,
             "w": 128,
             "h": 64,
             "output_connections": [],
@@ -705,8 +721,8 @@
          },
          "Explanation (2)": {
             "description": "",
-            "x": 1832,
-            "y": 452,
+            "x": 1524,
+            "y": 931,
             "w": 128,
             "h": 64,
             "output_connections": [],
@@ -721,8 +737,8 @@
          },
          "Vedanta": {
             "description": "",
-            "x": 2393,
-            "y": 105,
+            "x": 2085,
+            "y": 584,
             "w": 128,
             "h": 64,
             "output_connections": [
@@ -737,6 +753,31 @@
                   "parent_node_name": "Vedanta",
                   "child_node_type": "note_nodes",
                   "child_node_name": "note_nodes_8"
+               }
+            ],
+            "input_connections": []
+         },
+         "map_nodes_1": {
+            "description": "",
+            "x": 2380,
+            "y": 927,
+            "w": 128,
+            "h": 64,
+            "output_connections": [],
+            "input_connections": []
+         },
+         "Autism - Schizophrenia Spectrum": {
+            "description": "",
+            "x": 1400,
+            "y": 408,
+            "w": 128,
+            "h": 64,
+            "output_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "Autism - Schizophrenia Spectrum",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "note_nodes_12"
                }
             ],
             "input_connections": []

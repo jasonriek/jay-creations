@@ -21,6 +21,8 @@ html, body, div {
   body {
     overflow: hidden;
     font-family: "Audiowide", sans-serif;
+    background: -moz-radial-gradient(50% 0% 0deg,circle farthest-corner,#1a0905,#521f10);
+    background: -webkit-gradient(radial,50% 59,500,50% 0,40,from(#1a0905),to(#521f10));
     background-color: #000000;
     color: #FFFFFF;
     height: 100%;
@@ -301,23 +303,21 @@ nav.navigation
 
   .backButton {
       position: absolute;
-      bottom: 10%;
-      left: 25%;
-      background: #4a1819;
-      color: #4a1819;
+      bottom: 15%;
+      left:0;
+      right: 256px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ffffff;
       width: 4rem;
       height: 4rem;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      z-index: 2;
+      cursor: pointer;
   }
-  
-  .backButton:hover {
-      background-color: #4b1e1e;
-  }
-  
+
   .backButton.pointer {
       cursor: pointer;
   }
@@ -325,8 +325,8 @@ nav.navigation
   .leftChevron {
       content: ' ';
       display: inline-block;
-      border-bottom: 3px solid #FFFFFF;
-      border-right: 3px solid #FFFFFF;
+      border-bottom: 3px solid #ffffff;
+      border-right: 3px solid #ffffff;
       height: 24px;
       width: 24px;
       margin-left: 9px;
@@ -335,21 +335,19 @@ nav.navigation
 
   .nextButton {
     position: absolute;
-    bottom: 10%;
-    right: 25%;
-    background: #4a1819;
-    color: #4a1819;
+    bottom: 15%;
+    left: 256px;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
     width: 4rem;
     height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    z-index: 2;
-}
-
-.nextButton:hover {
-  background-color: #4b1e1e;
+    cursor: pointer;
 }
 
 .nextButton.pointer {
@@ -359,10 +357,111 @@ nav.navigation
 .rightChevron {
     content: ' ';
     display: inline-block;
-    border-bottom: 3px solid #FFFFFF;
-    border-right: 3px solid #FFFFFF;
+    border-bottom: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
     height: 24px;
     width: 24px;
     margin-right: 9px;
     transform: rotate(315deg);
+}
+
+.play-triangle {
+  width: 0; 
+  height: 0; 
+  border-top: 15px solid transparent;
+  border-bottom:15px solid transparent;
+  border-left: 20px solid #000000;
+  margin-left: 6px;
+}
+
+.pause-lines {
+  width: 16px;
+  height: 28px;
+  border-right: 4px solid #000;
+  border-left: 4px solid #000;
+}
+
+.playButton {
+    position: absolute;
+    bottom: 15%;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    background: #d0a342;
+    color: #000000;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.playButton.pointer {
+  cursor: pointer;
+}
+
+.song-info {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100px;
+  top: 10%;
+  left:0;
+  right:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#music-progress {
+  position: absolute;
+  bottom: 10%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+
+input[type="range"].input-range--custom {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 4px 0;
+  background-color: #DDDDDD;
+  border-radius: 20px 20px 0px 0px;
+}
+
+input[type="range"].input-range--custom:focus {
+  outline: none;
+}
+
+input[type="range"].input-range--custom::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+}
+
+input[type="range"].input-range--custom:after {
+  width: 20%;
+  height: 4px;
+  background-color: #d0a342;
+}
+
+input[type="range"].input-range--custom::-webkit-slider-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 15px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5.5px;
+  background: #d0a342;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
 }

@@ -1,5 +1,13 @@
 let canvas = document.querySelector("canvas");
 let ctx = canvas.getContext("2d");
+let play_symbol = document.getElementById('play-symbol');
+let autoplay = true;
+let song_info = document.getElementById('song-info');
+let music_progress = document.getElementById('music-progress');
+let mouse_on_slider = false;
+let play_button = document.getElementById('play-button');
+let next_button = document.getElementById('next-button');
+let back_button = document.getElementById('back-button');
 
 let sample_songs = [
   'Coastal Fever',
@@ -18,7 +26,27 @@ let sample_songs = [
   'TheNextWay',
   'TheLivingSea'
 ];
+
+let song_names = [
+  'Coastal Fever',
+  'Anthem of the Night Dwellers',
+  'Duality',
+  'Sense',
+  'Drei',
+  'Isotopes',
+  'Mall (Remix)',
+  'Going your Own Way',
+  'Recurring Dream',
+  'Somewhere',
+  'Courage through Time (Zelda Oot Remix)',
+  'Winter Warmth',
+  'Station X Infected',
+  'The Next Way',
+  'The Living Sea'
+]
 let song_index = 0;
+
+song_info.innerHTML = `${song_names[song_index]} - JayMythos`;
 
 canvas.width = document.body.clientWidth;
 canvas.height = document.body.clientHeight;
@@ -126,14 +154,18 @@ function toggleAudio() {
   }
 
   if (audio.paused) {
+    play_symbol.setAttribute('class', 'pause-lines');
     audio.play();
   } else {
+    play_symbol.setAttribute('class', 'play-triangle');
     audio.pause();
   }
 }
+play_button.addEventListener('click', toggleAudio);
 
 function loadSong(song_name)
 {
+  song_info.innerHTML = `${song_names[song_index]} - JayMythos`;
   audio.src = `/audio/music/${song_name}.mp3`;
   audio.load();
 }
@@ -148,22 +180,68 @@ function nextSong()
   toggleAudio();
 }
 
+next_button.addEventListener('click', nextSong);
+
 function lastSong()
 {
   song_index--;
   if(song_index < 0) {
     song_index = sample_songs.length - 1;
   }
-
   loadSong(sample_songs[song_index]);
   toggleAudio();
 }
 
-canvas.addEventListener('click', toggleAudio);
+back_button.addEventListener('click', lastSong);
+
+//canvas.addEventListener('click', toggleAudio);
 
 document.body.addEventListener('touchend', function(ev) {
   context.resume();
 });
+
+audio.addEventListener('ended', function(){
+  if(autoplay) {
+    nextSong();
+  }
+  else {
+    play_symbol.setAttribute('class', 'play-triangle');
+  }
+
+});
+
+// Progress bar for music
+audio.addEventListener('loadeddata', function() {
+  music_progress.value = 0;
+});
+
+audio.addEventListener('timeupdate', function() {
+  if (!mouse_on_slider) {
+    music_progress.value = audio.currentTime / audio.duration * 100;
+    let fillColor = "#d0a342";
+    let emptyColor = "#DDDDDD";
+    let percent = (100 * (music_progress.value - music_progress.min)) / (music_progress.max - music_progress.min) + "%";
+    //  this.setAttribute('value', this.value);
+    //  this.setAttribute('title', this.value);
+    music_progress.style.backgroundImage = `linear-gradient( to right, ${fillColor}, ${fillColor} ${percent}, ${emptyColor} ${percent})`;
+  }
+});
+
+
+music_progress.addEventListener("change", () => {
+  const pct = music_progress.value / 100;
+  audio.currentTime = (audio.duration || 0) * pct;
+});
+
+music_progress.addEventListener("mousedown", () => {
+  mouse_on_slider = true;
+});
+
+music_progress.addEventListener("mouseup", () => {
+  mouse_on_slider = false;
+});
+
+
 
 // -------------
 // Canvas stuff
@@ -188,7 +266,7 @@ function drawLine(points) {
 function connectPoints(pointsA, pointsB) {
   for (let i = 0; i < pointsA.length; i++) {
     ctx.beginPath();
-    ctx.strokeStyle = 'rgba(255,255,255,0.5)';
+    ctx.strokeStyle = 'rgba(255,255,255)';
     ctx.moveTo(pointsA[i].x, pointsA[i].y);
     ctx.lineTo(pointsB[i].x, pointsB[i].y);
     ctx.stroke();
@@ -275,6 +353,7 @@ function onResize() {
   createPoints();
 
 };
+
 
 window.addEventListener('resize', onResize);
 draw();

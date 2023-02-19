@@ -2,9 +2,12 @@
 
 <div class="container">
     <div class="sub-container">
-        <a class="backButton" href="javascript:lastSong();"><div class="leftChevron"></div></a>
+    <div id="song-info" class="song-info"></div>
+        <div id="back-button" class="backButton"><div class="leftChevron"></div></div>
     <canvas width="460" height="320"></canvas>
-        <a class="nextButton" href="javascript:nextSong();"><div class="rightChevron"></div></a>
+        <div id="play-button" class="playButton" href="javascript:toggleAudio();"><div id="play-symbol" class="play-triangle"></div></div>
+        <div id="next-button" class="nextButton"><div class="rightChevron"></div></div>
+        <input type="range" value="0" min="0" max="100" step="1" id="music-progress" class="input-range--custom">
 </div>
 
 <script src="/js/music-player.js"></script>

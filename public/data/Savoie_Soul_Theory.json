@@ -1,0 +1,286 @@
+{
+   "name": "Savoie_Soul Theory",
+   "nodes": {
+      "note_nodes": {
+         "The Soul Theory": {
+            "description": "The Soul Theory: Trying to figure out how to prove \nthe soul theory is all encompassing (as a theory) \nwhen it comes to the self.",
+            "x": 845.5,
+            "y": 99,
+            "w": 331,
+            "h": 78,
+            "output_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "The Soul View"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Body View"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Brain View"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Psychological View"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Doesn't Matter View"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Continuity View"
+               },
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Numerical Sameness"
+               }
+            ],
+            "input_connections": []
+         },
+         "Body Refutation _01": {
+            "description": "Body simply houses the brain.",
+            "x": 408.5,
+            "y": 622,
+            "w": 200.5,
+            "h": 53,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "Body View",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Body Refutation _01"
+               }
+            ]
+         },
+         "Brain Refutation_01": {
+            "description": "Brain matter can be grown in \na lab yet have no \"true consciousness\".",
+            "x": 586.5,
+            "y": 745.75,
+            "w": 253,
+            "h": 62.5,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "Brain View",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Brain Refutation_01"
+               }
+            ]
+         },
+         "Soul Support_01": {
+            "description": "\"Consciousness\" needs to be defined...",
+            "x": 339.01171875,
+            "y": 190.01171875,
+            "w": 251,
+            "h": 63,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "The Soul View",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Soul Support_01"
+               }
+            ]
+         },
+         "Soul Support_02": {
+            "description": "...",
+            "x": 191.01171875,
+            "y": 298.01171875,
+            "w": 128,
+            "h": 64,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "The Soul View",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Soul Support_02"
+               }
+            ]
+         },
+         "Soul Support_03": {
+            "description": "...",
+            "x": 376.01171875,
+            "y": 433.01171875,
+            "w": 128,
+            "h": 64,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "The Soul View",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Soul Support_03"
+               }
+            ]
+         }
+      },
+      "map_nodes": {
+         "The Soul View": {
+            "description": "The future self...",
+            "x": 448,
+            "y": 315,
+            "w": 128,
+            "h": 64,
+            "output_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "The Soul View",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Soul Support_01"
+               },
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "The Soul View",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Soul Support_02"
+               },
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "The Soul View",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Soul Support_03"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "The Soul View"
+               }
+            ]
+         },
+         "Body View": {
+            "description": "Fake",
+            "x": 581,
+            "y": 465,
+            "w": 128,
+            "h": 64,
+            "output_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "Body View",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Body Refutation _01"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Body View"
+               }
+            ]
+         },
+         "Brain View": {
+            "description": "Fake",
+            "x": 784,
+            "y": 567,
+            "w": 128,
+            "h": 64,
+            "output_connections": [
+               {
+                  "parent_node_type": "map_nodes",
+                  "parent_node_name": "Brain View",
+                  "child_node_type": "note_nodes",
+                  "child_node_name": "Brain Refutation_01"
+               }
+            ],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Brain View"
+               }
+            ]
+         },
+         "Psychological View": {
+            "description": "Fake",
+            "x": 1156,
+            "y": 561,
+            "w": 128,
+            "h": 64,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Psychological View"
+               }
+            ]
+         },
+         "Continuity View": {
+            "description": "Fake",
+            "x": 953,
+            "y": 645,
+            "w": 128,
+            "h": 64,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Continuity View"
+               }
+            ]
+         },
+         "Doesn't Matter View": {
+            "description": "Fake",
+            "x": 1395,
+            "y": 338,
+            "w": 128,
+            "h": 64,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Doesn't Matter View"
+               }
+            ]
+         },
+         "Numerical Sameness": {
+            "description": "Personal Identity is not Numerical Sameness.",
+            "x": 1399,
+            "y": 500,
+            "w": 128,
+            "h": 64,
+            "output_connections": [],
+            "input_connections": [
+               {
+                  "parent_node_type": "note_nodes",
+                  "parent_node_name": "The Soul Theory",
+                  "child_node_type": "map_nodes",
+                  "child_node_name": "Numerical Sameness"
+               }
+            ]
+         }
+      }
+   }
+}
