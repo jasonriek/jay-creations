@@ -78,6 +78,13 @@ function getBlogs(theme)
     return db.readAll(`${theme}_${BLOG_TABLE}`);
 }
 
+function getBlogIDs(theme) 
+{
+    db.settings.database = db.database;
+    theme = theme.trim().toUpperCase();
+    return db.readFieldsAll(`${theme}_${BLOG_TABLE}`, ['id']);
+}
+
 function getBlogCount(theme)
 {
     db.settings.database = db.database;
@@ -101,5 +108,6 @@ module.exports = {
     createBlogThemeTable,
     insertBlogTheme,
     getBlogThemes,
+    getBlogIDs,
     checkIfBlogThemeExists
 }

@@ -7,6 +7,9 @@ const body_parser = require('body-parser');
 const fs = require('fs');
 const db = require('./service/sql');
 const multer = require('multer');
+const utils = require('./service/utils');
+
+
 //const Gtts = require('gtts');
 //const { exec } = require('child_process');
 const app = express();
@@ -47,14 +50,25 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage: storage});
 
-// LOGIN ROUTES
+
+// LOGIN ROUTEs
 app.get('/login', login_routes.login_get);
 app.get('/logout', login_routes.logout_get);
 app.post('/login', login_routes.login_post);
 
+
 app.get('/blog_write', login_routes.restrict, (req, res) => {
-    let themes = db.getBlogThemes();
-    let context = {themes: themes};
+    let context = {caps: utils.capitalize};
+    let themes = db.getBlogThemes()
+    let ids = [];
+    for(let theme of themes) {
+        ids = db.getBlogIDs(theme.THEME)
+        theme['last_id'] = 1
+        if(ids.length) {
+            theme['last_id'] = ids.slice(-1)[0].id;
+        }
+    }
+    context['themes'] = themes;
     res.render('blog_write', context);
 });
 
@@ -83,13 +97,17 @@ app.post('/blog_write/image_upload', upload.single('IMAGE'), (req, res, next) =>
 });
 
 app.get('/', (req, res) => {
-    let context = {};
-    const DEFAULT_THEME = 'PHILOSOPHY';
-    db.createBlogThemeTable();
-    db.createBlogTable(DEFAULT_THEME);
-    if(!db.checkIfBlogThemeExists(DEFAULT_THEME)) {
-        db.insertBlogTheme(DEFAULT_THEME);
+    let context = {caps: utils.capitalize};
+    let themes = db.getBlogThemes()
+    let ids = [];
+    for(let theme of themes) {
+        ids = db.getBlogIDs(theme.THEME)
+        theme['last_id'] = 1
+        if(ids.length) {
+            theme['last_id'] = ids.slice(-1)[0].id;
+        }
     }
+    context['themes'] = themes;
     res.render('index', context);
 });
 
@@ -105,8 +123,19 @@ app.get('/blog/:theme/:id', (req, res) => {
         subject: blog.SUBJECT,
         author: blog.AUTHOR,
         content: blog.CONTENT,
-        creation_time: blog.CREATION_TIME
+        creation_time: blog.CREATION_TIME,
+        caps: utils.capitalize
     };
+    let themes = db.getBlogThemes()
+    let ids = [];
+    for(let theme of themes) {
+        ids = db.getBlogIDs(theme.THEME)
+        theme['last_id'] = 1
+        if(ids.length) {
+            theme['last_id'] = ids.slice(-1)[0].id;
+        }
+    }
+    context['themes'] = themes;
     res.render('blog', context);
 });
 
@@ -147,7 +176,17 @@ app.get('/videos', (req, res) => {
 });
 
 app.get('/music', (req, res) => {
-    let context = {};
+    let context = {caps: utils.capitalize};
+    let themes = db.getBlogThemes()
+    let ids = [];
+    for(let theme of themes) {
+        ids = db.getBlogIDs(theme.THEME)
+        theme['last_id'] = 1
+        if(ids.length) {
+            theme['last_id'] = ids.slice(-1)[0].id;
+        }
+    }
+    context['themes'] = themes;
     res.render('music', context);
 });
 

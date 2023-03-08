@@ -1,9 +1,11 @@
 const hash = require('pbkdf2-password')()
-const db = require('../service/admin_sql');
+const admin_db = require('../service/admin_sql');
+const db = require('../service/sql');
+const utils = require('../service/utils');
 
 function authenticate(name, pass, fn) {
     if (!module.children) console.log('authenticating %s:%s', name, pass);
-    let user = db.adminUsername(name);
+    let user = admin_db.adminUsername(name);
     // query the db for the given username
     if (!user) return fn(null, null)
     // apply the same algorithm to the POSTed password, applying
@@ -32,8 +34,20 @@ function logout_get(req, res){
     });
 }
 
-function login_get (req, res) {  
-    res.render('login');
+function login_get (req, res) { 
+  let context = {caps: utils.capitalize};
+  let themes = db.getBlogThemes()
+  let ids = [];
+  for(let theme of themes) {
+      ids = db.getBlogIDs(theme.THEME)
+      theme['last_id'] = 1
+      if(ids.length) {
+          theme['last_id'] = ids.slice(-1)[0].id;
+      }
+  }
+  context['themes'] = themes;
+  console.log(context);
+  res.render('login', context);
 }
 
 function login_post (req, res, next) {

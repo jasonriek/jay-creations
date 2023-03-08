@@ -4,7 +4,7 @@
       "note_nodes": {
          "Metaphysics": {
             "description": "Metaphysics",
-            "x": 318.5,
+            "x": 319.5,
             "y": 459.5,
             "w": 81,
             "h": 31,
@@ -27,7 +27,7 @@
          },
          "note_nodes_1": {
             "description": "Riddles of Existence ",
-            "x": 439,
+            "x": 440,
             "y": 507,
             "w": 137,
             "h": 27,
@@ -43,7 +43,7 @@
          },
          "Aristotle": {
             "description": "Aristotle",
-            "x": 693,
+            "x": 694,
             "y": 403.5,
             "w": 73,
             "h": 28.5,
@@ -65,7 +65,7 @@
          },
          "note_nodes_2": {
             "description": "\"first philosophy\"",
-            "x": 892.5,
+            "x": 893.5,
             "y": 237.5,
             "w": 123,
             "h": 27,
@@ -88,7 +88,7 @@
          },
          "note_nodes_3": {
             "description": "general nature of existence",
-            "x": 1150,
+            "x": 1151,
             "y": 478,
             "w": 182,
             "h": 27,
@@ -111,7 +111,7 @@
          },
          "note_nodes_4": {
             "description": "Existence does not seem\nto be a separate property\nthat can be added or\ndeleted.",
-            "x": 1371,
+            "x": 1372,
             "y": 536,
             "w": 166,
             "h": 62,
@@ -129,7 +129,7 @@
       "map_nodes": {
          "The science of   being qua being": {
             "description": "The term \"science\" here means theoretical\nknowledge.",
-            "x": 1000,
+            "x": 1001,
             "y": 309,
             "w": 128,
             "h": 64,

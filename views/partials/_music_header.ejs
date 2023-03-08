@@ -27,7 +27,9 @@
          
                 <button class="accordion">Blog</i></button>
                 <div class="accordian-panel">
-                  <a href="/blog/philosophy/1">Philosophy</a>
+                <% for(let theme of themes) { %>
+                <a href="/blog/<%- theme.THEME.toLowerCase() %>/<%- theme.last_id %>"><%- caps(theme.THEME) %></a>
+                <% } %>
                 </div>
 
                 <button class="accordion">Projects</i></button>

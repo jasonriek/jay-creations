@@ -63,6 +63,17 @@ function readAll(table_name) {
     catch(error){return console.error(error);}
 }
 
+function readFieldsAll(table_name, fields=[]) {
+    try {
+        const _fields = fields.join(',');
+        const sql = `SELECT ${_fields} FROM ${table_name};`;
+        const read_query = settings.database.prepare(sql);
+        let rows = read_query.all();
+        return rows;
+    }
+    catch(error){return console.error(error);}
+}
+
 // *UPDATE ->
 // Updates a value from specified column and condition.
 function update(table_name, update_column, update_value, has_condition=false, condition_column=null, condition_value=null) {
@@ -102,6 +113,7 @@ module.exports = {
     insert,
     read,
     readAll,
+    readFieldsAll,
     update,
     remove,
     settings,

@@ -14,10 +14,10 @@
           </div>
       </div>
       <% if(parseInt(id) > 1)  { %>
-        <a class="last-link" href="\blog\<%= theme.toLowerCase() %>\<%= parseInt(id) - 1 %>" title="Last blog entry"> << </a>
+        <a class="next-link" href="\blog\<%= theme.toLowerCase() %>\<%= parseInt(id) - 1 %>" title="Last blog entry"> >> </a>
       <% } %>
       <% if(parseInt(id) < parseInt(blog_count)) { %> 
-        <a class="next-link" href="\blog\<%= theme.toLowerCase() %>\<%= parseInt(id) + 1 %>" title="Next blog entry"> >> </a>
+        <a class="last-link" href="\blog\<%= theme.toLowerCase() %>\<%= parseInt(id) + 1 %>" title="Next blog entry"> << </a>
       <% } %>
 </div>
 
