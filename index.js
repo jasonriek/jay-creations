@@ -59,17 +59,30 @@ app.post('/login', login_routes.login_post);
 
 app.get('/blog_write', login_routes.restrict, (req, res) => {
     let context = {caps: utils.capitalize};
-    let themes = db.getBlogThemes()
+    let themes = db.getBlogThemes();
     let ids = [];
     for(let theme of themes) {
-        ids = db.getBlogIDs(theme.THEME)
-        theme['last_id'] = 1
+        ids = db.getBlogIDs(theme.THEME);
+        theme['last_id'] = 1;
         if(ids.length) {
             theme['last_id'] = ids.slice(-1)[0].id;
         }
     }
     context['themes'] = themes;
     res.render('blog_write', context);
+});
+
+app.get('/blog_edit/:theme/:id', login_routes.restrict, (req, res) => {
+    let context = {caps: utils.capitalize};
+    let theme = req.params.theme;
+    let id = req.params.id;
+    let themes = db.getBlogThemes();
+    let blog = db.getBlog(theme, id);
+    context['blog'] = blog;
+    context['theme'] = theme;
+    context['id'] = id;
+    context['themes'] = themes;
+    res.render('blog_edit', context);
 });
 
 app.post('/blog_write', (req, res) => {
@@ -79,6 +92,17 @@ app.post('/blog_write', (req, res) => {
     let theme = req.body.THEME;
     console.log(theme);
     db.insertBlog(theme, subject, author, content);
+    res.redirect('/');
+});
+
+app.post('/blog_edit/:theme/:id', (req, res) => {
+    let theme = req.params.theme;
+    let id = req.params.id;
+    let subject = req.body.SUBJECT;
+    let author = req.body.AUTHOR;
+    let content = req.body.CONTENT;
+
+    db.updateBlog(theme, subject, author, content, id);
     res.redirect('/');
 });
 
@@ -98,7 +122,7 @@ app.post('/blog_write/image_upload', upload.single('IMAGE'), (req, res, next) =>
 
 app.get('/', (req, res) => {
     let context = {caps: utils.capitalize};
-    let themes = db.getBlogThemes()
+    let themes = db.getBlogThemes();
     let ids = [];
     for(let theme of themes) {
         ids = db.getBlogIDs(theme.THEME)
@@ -109,6 +133,17 @@ app.get('/', (req, res) => {
     }
     context['themes'] = themes;
     res.render('index', context);
+});
+
+app.get('/blog/:theme', (req, res) => {
+    let context = {caps: utils.capitalize};
+    let themes = db.getBlogThemes();
+    let blog_theme = req.params.theme;
+    let blog_pages = db.getBlogByDESCDates(blog_theme);
+    context['theme'] = blog_theme;
+    context['themes'] = themes;
+    context['blogs'] = blog_pages;
+    res.render('blog_listing', context);
 });
 
 app.get('/blog/:theme/:id', (req, res) => {

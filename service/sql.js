@@ -32,6 +32,18 @@ function createBlogThemeTable()
     );`)
 }
 
+function getBlogByDESCDates(theme)
+{
+    db.settings.database = db.database;
+    try {
+        const sql = `SELECT id, SUBJECT, AUTHOR, CONTENT, strftime('%m/%d/%Y', CREATION_TIME) as dt FROM ${theme}_${BLOG_TABLE} ORDER BY ${CREATION_TIME_COLUMN} DESC;`;
+        const read_query = db.settings.database.prepare(sql);
+        let rows = read_query.all();
+        return rows;
+    }
+    catch(error){return console.error(error);}
+}
+
 
 function insertBlog(theme, subject, author, content)
 {
@@ -49,6 +61,17 @@ function insertBlog(theme, subject, author, content)
             author,
             content
         ], true);
+}
+
+function updateBlog(theme, subject, author, content, id)
+{
+    db.settings.database = db.database;
+    theme = theme.trim().toUpperCase();
+    let table = `${theme}_${BLOG_TABLE}`;
+    id = parseInt(id);
+    db.update(table, SUBJECT_COLUMN, subject, true, 'id', id);
+    db.update(table, AUTHOR_COLUMN, author, true, 'id', id);
+    db.update(table, CONTENT_COLUMN, content, true, 'id', id);
 }
 
 function checkIfBlogThemeExists(theme)
@@ -109,5 +132,7 @@ module.exports = {
     insertBlogTheme,
     getBlogThemes,
     getBlogIDs,
-    checkIfBlogThemeExists
+    checkIfBlogThemeExists,
+    getBlogByDESCDates,
+    updateBlog
 }

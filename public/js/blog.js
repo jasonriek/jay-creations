@@ -36,4 +36,6 @@ function submitForm(e) {
     blog_content.value = content.replace('src="image', 'src="/image');
 }
 
+
+
 form.addEventListener('submit', submitForm);

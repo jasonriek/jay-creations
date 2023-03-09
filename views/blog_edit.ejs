@@ -4,18 +4,13 @@
         <div class="sub-container">
 
         <h1>Enter New Blog Post</h1><br />
-        <form action="/blog_write" method="post" id="form">
-            <!-- Text area matching the selector specified in the TinyMCE configuration -->
-            <label for="theme">Blog Theme</label><br /><select name="THEME" id="theme">
-                <% for(let row of themes) { %>
-                    <option value="<%= row.THEME %>"><%= row.THEME.charAt(0).toUpperCase() + row.THEME.slice(1).toLowerCase() %></option>
-                <% } %>
-            </select>
+        <form action="/blog_edit/<%- theme %>/<%- id %>" method="post" id="form">
+
             <br /><br />
-            <label for="subject">Subject</label><br /><input id="subject" name="SUBJECT" /><br /><br />
-            <label for="author">Author</label><br /><input id="author" name="AUTHOR" /><br /><br />
+            <label for="subject">Subject</label><br /><input id="subject" name="SUBJECT" value="<%- blog.SUBJECT %>"/><br /><br />
+            <label for="author">Author</label><br /><input id="author" name="AUTHOR" value="<%- blog.AUTHOR %>" /><br /><br />
             <label for="files"></label><input id="image" type="file" name="IMAGE" accept="image/*"><br /><br />
-            <textarea id="my-expressjs-tinymce-app"></textarea>
+            <textarea id="my-expressjs-tinymce-app"><%- blog.CONTENT %></textarea>
             <input type="hidden" id="blog-content", name="CONTENT" />
             <hr />
             <input id="submit-button" type="submit" value="Submit" />
