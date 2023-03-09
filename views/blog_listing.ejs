@@ -8,7 +8,7 @@
         <div class="inner-sub-container">
         <table>
             <tr>
-                <th><b>Subject</b></th><th><b>Author</b></th><th><b>Date</b></th>
+                <th><b>Subject</b></th><th><b>Date</b></th>
                 <% if(user) { %>
                 <th></th>
                 <% } %>
@@ -18,7 +18,7 @@
             <% for(let blog of blogs) { %>
             <tr>
                 <td><a href="/blog/<%- theme.toLowerCase() %>/<%- blog.id %>"><%- blog.SUBJECT %></a></td>
-                <td><%- blog.AUTHOR %></td>
+
                 <td><%- blog.dt %></td>
                 <% if(user) { %>
                 <td><div class="edit-icon" title="Edit" onclick="window.location.href='/blog_edit/<%- theme %>/<%- blog.id %>'"></div></td>

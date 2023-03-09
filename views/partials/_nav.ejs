@@ -1,6 +1,27 @@
-<nav class="menu">
+<div id="mySidepanel" class="sidepanel">
     <a href="/">Home</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Blog</a>
-    <a href="https://github.com/jasonriek" target="_blank">Github</a>
-</nav>
+
+    <button class="accordion">Blog</i></button>
+    <div class="accordian-panel">
+        <% for(let theme of themes) { %>
+            <% if(theme.THEME !== 'PHILOSOPHY') { %>
+                <a href="/blog/<%- theme.THEME.toLowerCase() %>"><%- caps(theme.THEME) %></a>
+            <% } %>
+        <% } %>
+    </div>
+
+    <button class="accordion">Projects</i></button>
+    <div class="accordian-panel">
+      <a href="#">ROAM (coming soon)</a>
+      <a href="#">ROAM API (coming soon)</a>
+      <a href="/projects/jmap">JMap</a>
+    </div>
+    <a href="/music">Music</a>
+    <a href="https://github.com/jasonriek">Github</a>
+    <hr class="white-hr" />
+    <% if(user) { %>
+        <a href="/logout">Logout</a>
+    <% } else { %>
+        <a href="/login">Login</a>
+    <% } %>
+</div>

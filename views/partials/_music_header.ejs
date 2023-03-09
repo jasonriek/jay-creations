@@ -22,30 +22,6 @@
             <div class="center-container">
                 <span class="header-title">JayMythos -> Music</span>
             </div>
-            <div id="mySidepanel" class="sidepanel">
-                <a href="/">Home</a>
-         
-                <button class="accordion">Blog</i></button>
-                <div class="accordian-panel">
-                <% for(let theme of themes) { %>
-                <a href="/blog/<%- theme.THEME.toLowerCase() %>/<%- theme.last_id %>"><%- caps(theme.THEME) %></a>
-                <% } %>
-                </div>
-
-                <button class="accordion">Projects</i></button>
-                <div class="accordian-panel">
-                  <a href="/projects/jmap">JMap</a>
-                </div>
-                <a href="/music">Music</a>
-                <a href="https://github.com/jasonriek">Github</a>
-                <hr class="white-hr" />
-                <% if(user) { %>
-                    <a href="/logout">Logout</a>
-                <% } else { %>
-                    <a href="/login">Login</a>
-                <% } %>
-    
-
-            </div>
+            <%- include('_nav') -%>
         </nav>
         <div class="master-container">
